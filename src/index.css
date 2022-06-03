@@ -9,11 +9,19 @@ input{
     font-size: 1.3rem;
     width: 100%;
 }
-.card-grid{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+ol{
+    padding-left: 0px;
+    padding-right: 0px;
 }
+.card-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+@media only screen and (max-width: 768px) {
+  .card-grid{
+    display: contents;
+  }
+} 
 .card{
     align-content: center;
     border: 1px solid grey;
@@ -31,4 +39,6 @@ input{
 
 .card img{
     max-height: 170px;
+    display: block;
+    margin: 0 auto;
 }
